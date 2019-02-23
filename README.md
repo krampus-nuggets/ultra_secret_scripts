@@ -1,18 +1,16 @@
 # NoRecoil script
-##### [UnKnoWnCheaTs] 
+#### [UnKnoWnCheaTs] 
 Original UnKnoWnCheaTs forum thread is [here](https://www.unknowncheats.me/forum/apex-legends/322650-python-norecoil-script-configs-game-apex.html)
-<br><br>
-##### [STATUS] 
+
+#### [STATUS] 
 <span style="color:green">Undetected</span> so far...
 
-<br><br>
-##### [IMPORTANT NOTES]
+#### [IMPORTANT NOTES]
 - Game **should be played in "Borderless" mode**.  
 - Current Apex Legends config is working with **1920x1080 resolution only**. 
 - For other resolutions you may create and share your own configs. How to do it read below.
 
-<br><br>
-##### [CONTENTS OF ARCHIVE]
+#### [CONTENTS OF ARCHIVE]
 `requirements.txt` - list of required python libs (use Python3 pls).  
 `very_secret_script.py` - main script  
 `pattern_generator.py` - script that helps you to get correct recoil configs  
@@ -21,29 +19,21 @@ Original UnKnoWnCheaTs forum thread is [here](https://www.unknowncheats.me/forum
 `keyboard_input.py` - this one I downloaded from web (simple methods didn't work)  
 `weapon_data/` - here you should store configs as `GAMENAME.json` files and images inside `GAMENAME_img/` dir.  
 
-<br><br>
-##### [GITHUB]
-To keep things up to date with all those hot-fixes and updates I decided to create github repository:
-[https://github.com/CharlesDankoff/ultra_secret_scripts](https://github.com/CharlesDankoff/ultra_secret_scripts)
-
-<br><br>
-##### [INSTALLATION]
+#### [INSTALLATION]
 All you need for this script is Python3 with libs listed in `requirements.txt`.  
 - Download and install Python3 from official site (use Google, pls).  
 - Then install `pip` for python3 (Google again).  
 - And then from `cmd` you can run command: `pip install <lib_name>`  
 Run this for each lib listed in `requirements.txt`  
 
-<br><br>
-##### [RUN SCRIPT]
+#### [RUN SCRIPT]
 To run this script you should use `cmd` command.  
 `python ./very_secret_script.py CONFIG`  
 Where CONFIG is the name of config (without .json) stored in `weapon_data/` dir  
 As example for running NoRecoil script for Apex Legends use:  
 `python ./very_secret_script.py apex`  
 
-<br><br>
-##### [KEYBINDINGS]
+#### [KEYBINDINGS]
 **F4** - Trun on/off NoRecoil  
 **F10** - Stop script  
 **NUM_4** - Previous weapon  
@@ -52,8 +42,7 @@ As example for running NoRecoil script for Apex Legends use:
 For Apex Legends I gathered wapons images so my script will autodetect what weapon you're using ath the moment (only when NoRecoil is On). No need to manually switch it with NUM_4 and NUM_6.  
 It works **ONLY in borderless 1920x1080**.
 
-<br><br>
-##### [CONFIGS]
+#### [CONFIGS]
 You can create your own configs for different games and my script should work well with them. Just use same format of .json file to store your config.  
 **.json config formatting:**
 ```json
@@ -81,8 +70,7 @@ Each weapon in list should have keys:
 `"pattern"` - List with weapon recoil pattern. Each item in this list is `[dx, dy]`. It's differences in `x` and `y` from previous shot. Can be gathered with method described below.  
 **NOTE:** if you will use `image_search` for detecting current weapon try to use as small images as possible and as small areas as possible (like I do in Apex Legends config). Large images/areas may do *weapon_detector* run slowly.  
 
-<br><br>
-##### [RECOIL PATTERN GENERATOR]
+#### [RECOIL PATTERN GENERATOR]
 Also for easier config making I wrote a small script that will help you to gather recoil patterns. This script have some description in it but I will share my method of gathering recoil patterns.
 - Go to Training Mode.
 - Pick weapon you want to get recoil pattern.
@@ -95,8 +83,7 @@ Also for easier config making I wrote a small script that will help you to gathe
 - When you finished -> press F10 to stop script.
 - Done! Now you can find recoil pattern in `tracked_pattern.txt` inside folder near the script. It is compatible with .json config format.
 
-<br><br>
-##### [APEX LEGENDS CONFIG]
+#### [APEX LEGENDS CONFIG]
 I wrote a sample config for Apex Legends.  
 It contains all weapons data and weapons images (for weapon autodetect). But I'm too lazy guy so I've filled recoil patterns only for light-ammo automatic weapons:  
 **Alternator,**  
@@ -106,10 +93,8 @@ It contains all weapons data and weapons images (for weapon autodetect). But I'm
 You can fill other weapons *recoil_patterns* by yourself using method I described above.  
 Also recoil_patterns I gathered may be a little bit not accurate (was too tired to snipe small pixels on my screen) so you can share your *recoil_patterns* with community in [this thread](https://www.unknowncheats.me/forum/apex-legends/322650-python-norecoil-script-configs-game-apex.html).  
 
-<br><br>
-##### [Meh?!]
+#### [Meh?!]
 I will be glad to hear any suggestions how I can improve this script!  
 Also you can try to build your configs for other games (or recoil_patterns for Apex Legends weapons) and share 'em in [this thread](https://www.unknowncheats.me/forum/apex-legends/322650-python-norecoil-script-configs-game-apex.html) or with pull requests.  
-<br><br>
 
-##### Thanks for reading!
+#### Thanks for reading!
