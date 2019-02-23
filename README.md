@@ -3,7 +3,7 @@
 Original UnKnoWnCheaTs forum thread is [here](https://www.unknowncheats.me/forum/apex-legends/322650-python-norecoil-script-configs-game-apex.html)
 <br><br>
 ##### [STATUS] 
-*<span style="color:green">Undetected</span>* so far...
+<span style="color:green">Undetected</span> so far...
 
 <br><br>
 ##### [IMPORTANT NOTES]
