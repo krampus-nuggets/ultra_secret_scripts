@@ -142,5 +142,5 @@ if __name__ == '__main__':
     LOCAL_HOST = sys.argv[1]
     LOCAL_PORT = int(sys.argv[2])
 
-    with ThreadingTCPServer((LOCAL_HOST, LOCAL_PORT), SocksProxy) as server:
-        server.serve_forever()
+    server = ThreadingTCPServer((LOCAL_HOST, LOCAL_PORT), SocksProxy)
+    server.serve_forever()
