@@ -7,6 +7,7 @@ import time
 import win32api
 import win32con
 import winsound
+import ctypes
 from image_search import get_screen_area_as_image, load_image_from_file, search_image_in_image
 from overlay_label import OverlayLabel
 from keyboard_input import keyb_down, keyb_up
