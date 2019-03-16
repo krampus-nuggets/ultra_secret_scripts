@@ -35,6 +35,16 @@ EMPTY_WEAPONS_LIST = [
     },
 ]
 
+# for cursor detector
+class POINT(ctypes.Structure):
+    _fields_ = [('x', ctypes.c_int),
+                ('y', ctypes.c_int)]
+
+class CURSORINFO(ctypes.Structure):
+    _fields_ = [('cbSize', ctypes.c_uint),
+                ('flags', ctypes.c_uint),
+                ('hCursor', ctypes.c_void_p),
+                ('ptScreenPos', POINT)]
 
 def beep_on():
     winsound.Beep(2000, 100)
@@ -71,6 +81,23 @@ def rmb_up():
 def is_lmb_pressed():
     return win32api.GetKeyState(LMB) < 0
 
+
+def cursor_detector():
+    # Load and set argument types
+    GetCursorInfo = ctypes.windll.user32.GetCursorInfo
+    GetCursorInfo.argtypes = [ctypes.POINTER(CURSORINFO)]
+    # Initialize the output structure
+    info = CURSORINFO()
+    info.cbSize = ctypes.sizeof(info)
+    # Do it!
+    if GetCursorInfo(ctypes.byref(info)):
+        if info.flags & 0x00000001:
+            return True
+        else:
+            return False
+    else:
+        print("WARNING: Cursor detector is not running!")
+        
 
 def load_weapons(weapon_filename):
     weapons_list = EMPTY_WEAPONS_LIST
@@ -242,7 +269,7 @@ def main(weapon_filename):
         if win32api.GetAsyncKeyState(NUM_6):
             current_weapon_index = next_weapon(weapons_list, current_weapon_index)
             time.sleep(0.2)
-        if is_lmb_pressed() and no_recoil:
+        if is_lmb_pressed() and no_recoil and not cursor_detector():
             process_no_recoil(overlay, weapons_list, current_weapon_index, no_recoil)
         time.sleep(0.01)
 
