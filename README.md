@@ -1,3 +1,7 @@
+# 04.11.2019
+This repo is pretty abandoned but script still working good, so you can modify it and use it. No further updates from me.
+Also you can make pull requests with your additional modifications, I check it from time to time and will merge any good modifications.
+
 # NoRecoil script
 #### [UnKnoWnCheaTs] 
 Original UnKnoWnCheaTs forum thread is [here](https://www.unknowncheats.me/forum/apex-legends/322650-python-norecoil-script-configs-game-apex.html)
